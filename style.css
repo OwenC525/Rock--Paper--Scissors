@@ -1,0 +1,15 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+
+#hdtext {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Kameron', serif;
+}
