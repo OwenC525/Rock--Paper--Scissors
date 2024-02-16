@@ -8,7 +8,7 @@ body {
     margin-top: auto;
   }
 
-#hdtext {
+.header1 {
     text-align: center;
     padding: 5px;
     font-family: 'Kameron', serif;
