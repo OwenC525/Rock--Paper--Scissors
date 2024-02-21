@@ -16,7 +16,12 @@ body {
     font-style: normal;
 }
 
-  
+.scores{
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+} 
 
   #btnimg {
     width: 200px;
