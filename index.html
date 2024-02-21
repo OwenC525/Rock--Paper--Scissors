@@ -21,24 +21,53 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Kameron:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
 
     </head>
 
     <body>
-        <header style="background-color: black; color: white;">
-            
-            <!-- HEADER TEXT -->
-            <h1 class="header1 mt-2" id="hdtext">Rock, Paper, Scissors!</h1>
 
-        </header>
-
+        <div class="container-fluid">
 
         <main class="container">
 
-            
+            <div class="scoreboard"> <!-- SCOREBOARD HERE-->
+                <h1 class="header">Rock, Paper Scissors!</h1>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 ">
+                      <h1 class="scores" id="playerScore"><span id="username"></span> Score:0</h1> <!-- PLAYER SCORE-->
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 ">
+                        <h1 class="scores" id="ComputerScore">Computer's Score:0</h1> <!-- COMPUTER SCORE-->
+                      </div>
+
+                      <h1 class="header">Choose a move!</h1>
+                        <h2 id="result" class="text-center"></h2>
+
+                        <div class="row justify-content-center g-4"> <!-- BUTTONS START-->
+                            <div class="col-md-3 text-center">
+                              <button id="rock" class="btn"><img src="images/rock.jpg"></button> <!-- ROCK BUTTON-->
+                            </div>
+
+                            <div class="col-md-3 text-center">
+                                <button id="paper" class="btn"><img src="images/paper.jpg"></button> <!-- PAPER BUTTON-->
+                            </div>
+
+                              <div class="col-md-3 text-center">
+                                <button id="scissor" class="btn"><img src="images/scissors.jpg"></button> <!-- SCISSORS BUTTON-->
+                              </div>
+
+                        </div>
+                </div>
+
+                <h2 id="whowon"></h2> <!-- WINNER RESULT HERE-->
+            </div>
 
         </main>
+        </div>
+        
 
         <!-- Footer-->
 
