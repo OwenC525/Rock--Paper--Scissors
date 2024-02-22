@@ -51,9 +51,11 @@ const getUserChoice = (userInput) => {
   
       
     };
+
+    // PUT BUTTON JS HERE LATER??
   
   const playGame = () => {
-    const userChoice = getUserChoice('rock');
+    const userChoice = determineWinner();
     const computerChoice = getComputerChoice();
     console.log('You threw: ' + userChoice);
     console.log('The computer threw: ' + computerChoice);
