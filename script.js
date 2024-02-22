@@ -24,31 +24,16 @@ const getUserChoice = (userInput) => {
   };
   
   const determineWinner = (userChoice, computerChoice) => {
+    
     if (userChoice === computerChoice) {
       return 'Tie';
     } 
-    if (userChoice === 'rock') {
-      if (computerChoice === 'paper') {
-        return 'You lost';
-      } else {
-        return 'You Won!';
-      }
+    else if (userChoice === 'rock' && computerChoice === 'scissors' || userChoice === 'paper' && computerChoice === 'rock' || userChoice === 'scissors' && computerChoice === 'paper'){
+      return 'You Won!';
+    }  
+    else {
+      return 'You Lost';
     }
-    if (userChoice === 'paper') {
-      if (computerChoice === 'scissors') {
-        return 'You lost';
-      } else {
-        return 'You Won!';
-      }
-      }
-      if (userChoice === 'scissors') {
-        if (computerChoice === 'rock') {
-          return 'You lost';
-        } else {
-          return 'You Won!';
-        }
-      }
-  
       
     };
 
