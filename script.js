@@ -1,5 +1,5 @@
 console.log('hi');
-const getUserChoice = (userInput) => {
+const getUserChoice = () => {
     userInput = userInput.toLowerCase();
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
       return userInput;
@@ -40,7 +40,7 @@ const getUserChoice = (userInput) => {
     // PUT BUTTON JS HERE LATER??
   
   const playGame = () => {
-    const userChoice = determineWinner();
+    const userChoice = getUserChoice();
     const computerChoice = getComputerChoice();
     console.log('You threw: ' + userChoice);
     console.log('The computer threw: ' + computerChoice);
