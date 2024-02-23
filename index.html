@@ -37,11 +37,11 @@
                 <h3 class="header">Best out of 5!</p>
                 <div class="row">
                     <div class="col-md-6 col-sm-12 ">
-                      <h1 class="scores" id="playerScore"><span id="username"></span> Your Score: 0</h1> <!-- PLAYER SCORE-->
+                      <h1 class="scores" id="playerscore"><span id="username"></span> Your Score: 0</h1> <!-- PLAYER SCORE-->
                     </div>
 
                     <div class="col-md-6 col-sm-12 ">
-                        <h1 class="scores" id="ComputerScore">Computer's Score: 0</h1> <!-- COMPUTER SCORE-->
+                        <h1 class="scores" id="computerscore">Computer's Score: 0</h1> <!-- COMPUTER SCORE-->
                       </div>
 
                       <h1 class="header">Choose a move!</h1>
@@ -53,11 +53,11 @@
                             </div>
 
                             <div class="col-md-3 text-center">
-                                <button onclick="playGame('paper')" id="paper" class="btn"><img id="btnimg" src="images/paper.png"></button> <!-- PAPER BUTTON-->
+                                <button onclick="determineWinner('paper')" id="paper" class="btn"><img id="btnimg" src="images/paper.png"></button> <!-- PAPER BUTTON-->
                             </div>
 
                               <div class="col-md-3 text-center">
-                                <button onclick="playGame('scissors')" id="scissors" class="btn"><img id="btnimg" src="images/scissors.png"></button> <!-- SCISSORS BUTTON-->
+                                <button onclick="determineWinner('scissors')" id="scissors" class="btn"><img id="btnimg" src="images/scissors.png"></button> <!-- SCISSORS BUTTON-->
                               </div>
 
                         </div>

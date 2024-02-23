@@ -1,51 +1,39 @@
-console.log('hi');
-const getUserChoice = () => {
-    userInput = userInput.toLowerCase();
-    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
-      return userInput;
-    } else {
-      console.log('Invalid input');
-    };
-  };
-  
+
+let roundsplayed = 0
+let playerscore = 0
+let computerscore = 0
+
+
   const getComputerChoice = () => {
     const randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
       case 0:
       return 'rock';
-      break;
       case 1: 
       return 'paper';
-      break;
       case 2:
       return 'scissors'
-      break;
     }
   };
   
-  const determineWinner = (userChoice, computerChoice) => {
+  function determineWinner(userChoice) {
     
-    if (userChoice === computerChoice) {
-      return 'Tie';
+    if (userChoice === getComputerChoice()) {
+      result.textContent = 'It\'s a tie!';
+      roundsplayed++;
     } 
-    else if (userChoice === 'rock' && computerChoice === 'scissors' || userChoice === 'paper' && computerChoice === 'rock' || userChoice === 'scissors' && computerChoice === 'paper'){
-      return 'You Won!';
+    else if (userChoice === 'rock' && getComputerChoice() === 'scissors' || userChoice === 'paper' && getComputerChoice() === 'rock' || userChoice === 'scissors' && getComputerChoice() === 'paper'){
+      result.textContent = 'You won!';
+      roundsplayed++;
+      playerscore++;
     }  
     else {
-      return 'You Lost';
+      result.textContent = 'You lose!';
+      roundsplayed++;
+      computerscore++;
     }
       
     };
 
     // PUT BUTTON JS HERE LATER??
   
-  const playGame = () => {
-    const userChoice = getUserChoice();
-    const computerChoice = getComputerChoice();
-    console.log('You threw: ' + userChoice);
-    console.log('The computer threw: ' + computerChoice);
-  
-    console.log(determineWinner(userChoice, computerChoice));
-  };
-  
-  playGame();
