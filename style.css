@@ -29,3 +29,19 @@ body {
     border: 2px solid #000000;
     border-radius: 10%;
   }
+
+  /* Custom CSS for Rock, Paper, Scissors game */
+
+/* Flex container for buttons */
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+}
+
+/* Style for individual buttons */
+.buttons-container button {
+  width: 120px; /* Adjust width as needed */
+  height: 120px; /* Adjust height as needed */
+  margin: 10px; /* Adjust margin as needed */
+}

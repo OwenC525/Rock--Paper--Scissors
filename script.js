@@ -1,6 +1,6 @@
 let username = prompt('What is your name?'); // COLLECTS PLAYER NAME
 
-if (username === null) {
+if (username === null || '') {
   username = prompt('Enter your name!'); // ASKS FOR NAME UNTIL VALID RESPONSE IS ENTERED
 }
 
@@ -45,9 +45,18 @@ let computerScore = 0
       computerScore++;
     }
       
+
+    // UPDATES SCORE AND ROUNDS PLAYED
     document.getElementById('playerScore').innerText = `${username} score: ${playerScore}`
     document.getElementById('computerScore').innerHTML = `Computer Score: ${computerScore}`
+    document.getElementById('roundsPlayed').innerHTML = `Rounds played: ${roundsPlayed}`;
 
+    if (roundsPlayed === 5){ // STOPS GAME AFTER 5 ROUNDS
+      document.getElementById('rock').classList.toggle('d-none');
+      document.getElementById('paper').classList.toggle('d-none');
+      document.getElementById('scissors').classList.toggle('d-none');
+      document.getElementById('result').classList.toggle('d-none');
+   }
 
 
     };

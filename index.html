@@ -47,20 +47,25 @@
                       <h1 class="header">Choose a move!</h1>
                         <h2 id="result" class="text-center"></h2>
 
-                        <div class="row justify-content-center g-4"> <!-- BUTTONS START-->
-                            <div class="col-md-3 text-center">
-                              <button onclick="determineWinner('rock')" id="rock" class="btn"><img id="btnimg"  src="images/rock.png"></button> <!-- ROCK BUTTON-->
-                            </div>
+                        <h1 class="header" id="roundsPlayed">Rounds Played: 0</h1> <!-- ROUNDS PLAYED INDICATOR-->
 
-                            <div class="col-md-3 text-center">
-                                <button onclick="determineWinner('paper')" id="paper" class="btn"><img id="btnimg" src="images/paper.png"></button> <!-- PAPER BUTTON-->
-                            </div>
+                        <h2 id="playerchoice" class="header"></h2> <!-- PLAYER CHOICE INDICATOR-->
+                        <h2 id="compchoice" class="header"></h2> <!-- COMPUTER CHOICE INDICATOR-->
+                        <h2 id="result" class="text-center header"></h2> <!-- WINNER RESULT-->
+                        <h2 id="randommsg" class="text-center header"></h2> <!-- MESSAGE WITH THE RESULT-->
 
-                              <div class="col-md-3 text-center">
-                                <button onclick="determineWinner('scissors')" id="scissors" class="btn"><img id="btnimg" src="images/scissors.png"></button> <!-- SCISSORS BUTTON-->
-                              </div>
-
-                        </div>
+                        <div class="d-flex justify-content-center flex-wrap"> <!-- Flexbox container for buttons -->
+                            <button onclick="determineWinner('rock')" id="rock" class="btn mx-2"> <!-- ROCK BUTTON-->
+                                <img id="btnimg"  src="images/rock.png">
+                            </button>
+                            <button onclick="determineWinner('paper')" id="paper" class="btn mx-2"> <!-- PAPER BUTTON-->
+                                <img id="btnimg" src="images/paper.png">
+                            </button>
+                            <button onclick="determineWinner('scissors')" id="scissors" class="btn mx-2"> <!-- SCISSORS BUTTON-->
+                                <img id="btnimg" src="images/scissors.png">
+                            </button>
+                        </div> <!-- BUTTONS END-->
+                
                 </div>
 
                 <h2 id="whowon"></h2> <!-- WINNER RESULT HERE-->
