@@ -5,6 +5,7 @@ if (username === null || '') {
 }
 
 document.getElementById('username').innerHTML = username; // USES HTML ID TO INSERT USERNAME
+document.getElementById('reset').classList.toggle('d-none') //RESET BTN
 
 // INITIAL SCORING BOARD
 let roundsPlayed = 0
@@ -44,6 +45,29 @@ let computerScore = 0
       roundsPlayed++;
       computerScore++;
     }
+
+
+    function reset(){ // RESET BUTTON
+      roundsPlayed = 0
+      playerScore = 0
+      computerScore = 0
+  
+      document.getElementById('playerScore').textContent = `${username} Score: ${playScore}`
+      document.getElementById('ComputerScore').textContent = `Computer's Score: ${computerScore}`;
+      document.getElementById('roundsPlayed').textContent = `Rounds played: ${roundsplayed}`;
+      document.getElementById('result').textContent = ''
+      document.getElementById('userChoice').textContent = ``;
+      document.getElementById('computerChoice').textContent = ``;
+  
+      document.getElementById('rock').classList.toggle('d-none'); // RESETS THE BUTTONS
+      document.getElementById('paper').classList.toggle('d-none');
+      document.getElementById('scissor').classList.toggle('d-none');
+      document.getElementById('randomMsg').textContent = ''
+      document.getElementById('result').classList.toggle('d-none');
+      document.getElementById('reset').classList.toggle('d-none')
+     
+  
+  }
       
 
     // UPDATES SCORE AND ROUNDS PLAYED
@@ -56,6 +80,7 @@ let computerScore = 0
       document.getElementById('paper').classList.toggle('d-none');
       document.getElementById('scissors').classList.toggle('d-none');
       document.getElementById('result').classList.toggle('d-none');
+      document.getElementById('reset').classList.toggle('d-none')
    }
 
 
