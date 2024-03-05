@@ -40,6 +40,13 @@ body {
     border-radius: 10%;
   }
 
+.rstbtn {
+    width: 150px;
+    height: 50px;
+    border: 2px solid #000000;
+    border-radius: 10%;
+}
+
 
 /* MAKES THE BUTTONS CUSTOMIZED FOR MOBILE */
 .buttons-container {

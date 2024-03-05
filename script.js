@@ -5,7 +5,8 @@ if (username === null || '') {
 }
 
 document.getElementById('username').innerHTML = username; // USES HTML ID TO INSERT USERNAME
-document.getElementById('reset').classList.toggle('d-none') //RESET BTN
+
+
 
 // INITIAL SCORING BOARD
 let roundsPlayed = 0
@@ -26,6 +27,9 @@ let computerScore = 0
     }
   };
   
+  function reset() {
+    location.reload();
+  }
 
   // PLAYER CHOICE
   function determineWinner(userChoice) {
@@ -47,7 +51,7 @@ let computerScore = 0
     }
 
 
-    function reset(){ // RESET BUTTON
+    function reset() { // RESET BUTTON
       roundsPlayed = 0
       playerScore = 0
       computerScore = 0
@@ -68,6 +72,7 @@ let computerScore = 0
      
   
   }
+  
       
 
     // UPDATES SCORE AND ROUNDS PLAYED
@@ -76,11 +81,10 @@ let computerScore = 0
     document.getElementById('roundsPlayed').innerHTML = `Rounds played: ${roundsPlayed}`;
 
     if (roundsPlayed === 5){ // STOPS GAME AFTER 5 ROUNDS
-      document.getElementById('rock').classList.toggle('d-none');
-      document.getElementById('paper').classList.toggle('d-none');
-      document.getElementById('scissors').classList.toggle('d-none');
+      document.getElementById('rock').disabled = true;
+      document.getElementById('paper').disabled = true;
+      document.getElementById('scissors').disabled = true;
       document.getElementById('result').classList.toggle('d-none');
-      document.getElementById('reset').classList.toggle('d-none')
    }
 
 
