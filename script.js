@@ -41,6 +41,11 @@ function reset() {
   document.getElementById('userChoice').textContent = '';
   document.getElementById('computerChoice').textContent = '';
 
+  // Re-enable the buttons
+  document.getElementById('rock').disabled = false;
+  document.getElementById('paper').disabled = false;
+  document.getElementById('scissors').disabled = false;
+
   document.getElementById('rock').classList.remove('d-none'); // Reset the buttons
   document.getElementById('paper').classList.remove('d-none');
   document.getElementById('scissors').classList.remove('d-none');
